@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Успехи и Отзывы - Образовательный Центр Bir Qadam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                <i class="fas fa-graduation-cap me-2"></i>Bir Qadam
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Направления</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Преподаватели</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="success.html">Успехи</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                    <li class="nav-item">
+                        <button id="themeToggle" class="btn btn-sm btn-outline-light ms-2" title="Переключить тему">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <section class="text-center mb-5 pt-5">
+            <h1 class="display-3 fw-bold mb-4 animate-fade-in">Истории Успеха и Отзывы</h1>
+            <p class="lead fs-4 mb-4">Смотрите, чего добились наши ученики, и что они говорят о нас.</p>
+            <div class="decorative-line mx-auto"></div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5 fw-bold text-primary fs-1">
+                <i class="fas fa-chart-line me-2"></i>Наши Результаты в Цифрах
+            </h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4">
+                    <div class="card stat-card p-4 shadow-sm border-0 h-100" style="position: relative; top: 10px;"> 
+                        <i class="fas fa-chart-line fa-4x text-primary mb-4"></i>
+                        <h3 class="fw-bold text-primary display-4 mb-3">95%</h3>
+                        <p class="text-muted mb-0 fs-5">Поступают в ВУЗы на грант</p>
+                        <small class="text-muted d-block mt-2">По данным 2024 года</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card stat-card p-4 shadow-sm border-0 h-100" style="position: relative; top: 10px;">
+                        <i class="fas fa-award fa-4x text-primary mb-4"></i>
+                        <h3 class="fw-bold text-primary display-4 mb-3">120+</h3>
+                        <p class="text-muted mb-0 fs-5">Призеров олимпиад и конкурсов</p>
+                        <small class="text-muted d-block mt-2">Республиканские и международные</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card stat-card p-4 shadow-sm border-0 h-100" style="position: relative; top: 10px;">
+                        <i class="fas fa-graduation-cap fa-4x text-primary mb-4"></i>
+                        <h3 class="fw-bold text-primary display-4 mb-3">1000+</h3>
+                        <p class="text-muted mb-0 fs-5">Довольных выпускников</p>
+                        <small class="text-muted d-block mt-2">С 2017 года</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="mb-5">
+            <h2 class="text-center mb-5 fw-bold text-primary fs-1">
+                <i class="fas fa-star me-2"></i>Истории Наших Учеников
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card success-story-card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="student-avatar me-3">
+                                    <i class="fas fa-user-circle fa-3x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Асан К.</h5>
+                                    <small class="text-muted">РФМШ, 2024</small>
+                                </div>
+                            </div>
+                            <div class="score-badge mb-3">
+                                <i class="fas fa-trophy text-warning me-2"></i>
+                                <span class="fw-bold">Поступление в РФМШ</span>
+                            </div>
+                            <p class="card-text">"Благодаря Центру поступил в РФМШ! Подготовка была на высшем уровне, особенно по математике. Рекомендую всем, кто ищет качественное образование."</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card success-story-card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="student-avatar me-3">
+                                    <i class="fas fa-user-circle fa-3x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Екатерина Р.</h5>
+                                    <small class="text-muted">ЕНТ 2024</small>
+                                </div>
+                            </div>
+                            <div class="score-badge mb-3">
+                                <i class="fas fa-trophy text-warning me-2"></i>
+                                <span class="fw-bold">130 баллов на ЕНТ</span>
+                            </div>
+                            <p class="card-text">"Сдала ЕНТ на 130 баллов! Спасибо преподавателю по физике Айжан Сапаровой за то, что объясняет все простым языком. Очень довольна результатом!"</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card success-story-card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="student-avatar me-3">
+                                    <i class="fas fa-user-circle fa-3x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Дамир М.</h5>
+                                    <small class="text-muted">НИШ, 2023</small>
+                                </div>
+                            </div>
+                            <div class="score-badge mb-3">
+                                <i class="fas fa-trophy text-warning me-2"></i>
+                                <span class="fw-bold">Поступление в НИШ</span>
+                            </div>
+                            <p class="card-text">"Занимался год перед поступлением в НИШ. Преподаватели очень профессиональные, помогли с логикой и английским. Теперь учусь в НИШ Астаны!"</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card success-story-card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="student-avatar me-3">
+                                    <i class="fas fa-user-circle fa-3x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Алия С.</h5>
+                                    <small class="text-muted">ЕНТ 2024</small>
+                                </div>
+                            </div>
+                            <div class="score-badge mb-3">
+                                <i class="fas fa-trophy text-warning me-2"></i>
+                                <span class="fw-bold">135 баллов на ЕНТ</span>
+                            </div>
+                            <p class="card-text">"Получила грант в КазНУ им. аль-Фараби! Центр дал мне не только знания, но и уверенность. Ерлан Абдиев - лучший преподаватель математики!"</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card success-story-card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="student-avatar me-3">
+                                    <i class="fas fa-user-circle fa-3x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Марат Ж.</h5>
+                                    <small class="text-muted">КТЛ, 2024</small>
+                                </div>
+                            </div>
+                            <div class="score-badge mb-3">
+                                <i class="fas fa-trophy text-warning me-2"></i>
+                                <span class="fw-bold">Поступление в КТЛ</span>
+                            </div>
+                            <p class="card-text">"Прошел конкурс в КТЛ с первой попытки! Мини-группы и индивидуальный подход - это то, что мне помогло. Атмосфера в центре очень дружелюбная."</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card success-story-card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="student-avatar me-3">
+                                    <i class="fas fa-user-circle fa-3x text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-0">Айгерим Т.</h5>
+                                    <small class="text-muted">Ученица 10 класса</small>
+                                </div>
+                            </div>
+                            <div class="score-badge mb-3">
+                                <i class="fas fa-trophy text-warning me-2"></i>
+                                <span class="fw-bold">Улучшение успеваемости</span>
+                            </div>
+                            <p class="card-text">"Приходила с тройками по физике и математике. Через 3 месяца занятий - только пятерки! Преподаватели умеют найти подход и объяснить сложное просто."</p>
+                            <div class="rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel -->
+        <section class="my-5 p-5 bg-secondary-light rounded shadow">
+            <h2 class="text-center mb-5 fw-bold text-primary fs-1">
+                <i class="fas fa-comments me-2"></i>Что говорят родители
+            </h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote text-center p-4">
+                            <i class="fas fa-quote-left fa-3x text-primary mb-4"></i>
+                            <p class="fs-4 fst-italic mb-4">"Мой сын поступил в РФМШ благодаря профессионализму преподавателей Bir Qadam. Особенно благодарна за индивидуальный подход и постоянную обратную связь. Это лучший центр в городе!"</p>
+                            <footer class="blockquote-footer mt-3 fs-5">
+                                Гульнара К. <cite title="Source Title">(Мама ученика РФМШ)</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote text-center p-4">
+                            <i class="fas fa-quote-left fa-3x text-primary mb-4"></i>
+                            <p class="fs-4 fst-italic mb-4">"Дочь сдала ЕНТ на 130 баллов! Мы очень довольны результатом. Преподаватели используют современные методики, всегда готовы ответить на вопросы. Рекомендую всем родителям!"</p>
+                            <footer class="blockquote-footer mt-3 fs-5">
+                                Владимир Р. <cite title="Source Title">(Папа выпускницы 2024)</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote text-center p-4">
+                            <i class="fas fa-quote-left fa-3x text-primary mb-4"></i>
+                            <p class="fs-4 fst-italic mb-4">"Сын был слабым по математике и физике. После года занятий в Bir Qadam стал одним из лучших в классе. Спасибо за терпение и профессионализм!"</p>
+                            <footer class="blockquote-footer mt-3 fs-5">
+                                Айгуль М. <cite title="Source Title">(Мама ученика 9 класса)</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="text-center cta-section p-5 rounded mb-5 shadow">
+            <h3 class="mb-3 fw-bold text-white display-6">Станьте частью наших историй успеха!</h3>
+            <p class="lead text-white mb-4">Запишитесь на пробный урок и начните свой путь к успеху уже сегодня.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5">
+                Записаться на урок <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-1">&copy; 2025 Bir Qadam. Все права защищены.</p>
+                    <p class="mb-0"><a href="contact.html" class="text-white text-decoration-none">Контакты</a></p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-1"><i class="fas fa-phone-alt me-2"></i> +7 (700) 123-45-67</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i> info@center.kz</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="theme_toggle_js.js"></script>
+</body>
+</html>

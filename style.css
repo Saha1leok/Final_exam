@@ -1,0 +1,973 @@
+/* assets/css/style.css - УЛУЧШЕННАЯ ВЕРСИЯ */
+
+/* ========================================
+   1. GLOBAL STYLES & RESET
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   2. LAYOUT - STICKY FOOTER FIX
+   ======================================== */
+main {
+    flex: 1 0 auto;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+footer {
+    flex-shrink: 0;
+    margin-top: auto;
+}
+
+/* ========================================
+   3. HEADER & NAVIGATION
+   ======================================== */
+.navbar {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    margin: 0 0.25rem;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* ========================================
+   4. COLOR SCHEME
+   ======================================== */
+.bg-primary {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%) !important;
+}
+
+.text-primary {
+    color: #0056b3 !important;
+}
+
+.bg-secondary-light {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* ========================================
+   5. HERO SECTION
+   ======================================== */
+.hero-section {
+    padding: 4rem 0;
+    position: relative;
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.display-3, .display-4 {
+    background: linear-gradient(135deg, #0056b3, #0077cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   6. CARDS - GENERAL STYLES
+   ======================================== */
+.card {
+    border: none !important; 
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.card-hover {
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.card-hover:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 86, 179, 0.2);
+}
+
+/* Feature Cards on Home Page */
+.feature-card {
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.feature-card:hover {
+    border-color: #0056b3;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.feature-icon {
+    transition: transform 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* ========================================
+   7. TEACHER CARDS (about.html)
+   ======================================== */
+.teacher-card {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.teacher-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 86, 179, 0.25);
+    z-index: 10;
+}
+
+.teacher-card .card-img-top {
+    transition: all 0.5s ease;
+    border-radius: 16px 16px 0 0;
+    height: 300px;
+    object-fit: cover;
+}
+
+.teacher-card:hover .card-img-top {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Shine effect on hover */
+.teacher-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.teacher-card:hover::before {
+    left: 100%;
+}
+
+/* ========================================
+   8. STATISTICS SECTION
+   ======================================== */
+.statistics-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    padding: 3rem 0;
+}
+
+.stat-box {
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+}
+
+.stat-box i {
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover i {
+    transform: scale(1.2);
+    color: #003d82 !important;
+}
+
+/* ========================================
+   9. CTA SECTION
+   ======================================== */
+.cta-section {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* ========================================
+   10. BUTTONS
+   ======================================== */
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #003d82 0%, #002959 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 86, 179, 0.3);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20893a 100%);
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #20893a 0%, #1a6f30 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(40, 167, 69, 0.3);
+}
+
+.btn-outline-primary {
+    border: 2px solid #0056b3;
+    color: #0056b3;
+}
+
+.btn-outline-primary:hover {
+    background: #0056b3;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   11. FORMS
+   ======================================== */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.15);
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-select:valid {
+    border-color: #28a745;
+}
+
+.was-validated .form-control:invalid,
+.was-validated .form-select:invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback,
+.valid-feedback {
+    display: none;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-select:invalid ~ .invalid-feedback {
+    display: block;
+}
+
+.was-validated .form-control:valid ~ .valid-feedback,
+.was-validated .form-select:valid ~ .valid-feedback {
+    display: block;
+}
+
+/* ========================================
+   12. ACCORDION (courses.html)
+   ======================================== */
+.accordion-button {
+    border-radius: 12px !important;
+    font-weight: 600;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    color: #ffffff;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 86, 179, 0.15);
+}
+
+.accordion-item {
+    border: none !important;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* ========================================
+   13. CAROUSEL (success.html)
+   ======================================== */
+.carousel-item {
+    min-height: 300px;
+    padding: 2rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+    background-color: rgba(0, 86, 179, 0.7);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+/* ========================================
+   14. FOOTER
+   ======================================== */
+footer {
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #0077cc !important;
+    text-decoration: underline !important;
+}
+
+/* ========================================
+   15. RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    main {
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .teacher-card:hover {
+        transform: translateY(-8px) scale(1.02);
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-6px);
+    }
+    
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .statistics-section {
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .btn-lg {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .display-3 {
+        font-size: 2rem;
+    }
+}
+
+/* ========================================
+   16. UTILITY CLASSES
+   ======================================== */
+.shadow-custom {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-custom {
+    border-radius: 20px;
+}
+
+.animate-fade-in {
+    animation: fadeInUp 1s ease;
+}
+
+/* ========================================
+   17. ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus {
+    outline: 3px solid rgba(0, 86, 179, 0.3);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card {
+        border: 2px solid #000000 !important;
+    }
+    
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* ========================================
+   18. ADDITIONAL PAGE-SPECIFIC STYLES
+   ======================================== */
+
+/* Decorative Line */
+.decorative-line {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #0056b3, #00a8ff);
+    border-radius: 2px;
+    margin: 1rem auto;
+}
+
+/* About Page - Custom List */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.about-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.about-image-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.about-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* Courses Page - Price Cards */
+.price-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.price-card:hover {
+    border-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 86, 179, 0.15);
+}
+
+.price-tag {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    padding: 1rem;
+    border-radius: 12px;
+    color: white;
+}
+
+.quick-nav-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quick-nav-card:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+}
+
+.quick-nav-card:hover * {
+    color: white !important;
+}
+
+/* Success Page - Success Story Cards */
+.success-story-card {
+    transition: all 0.3s ease;
+}
+
+.success-story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 86, 179, 0.2);
+}
+
+.student-avatar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 2px solid #ffc107;
+}
+
+.rating {
+    font-size: 1.1rem;
+}
+
+/* Contact Page - Contact Info Boxes */
+.contact-info-box {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.contact-info-box:hover {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    transform: translateY(-5px);
+}
+
+.contact-info-box a:hover {
+    color: #0056b3 !important;
+}
+
+/* ========================================
+   19. LOADING STATES
+   ======================================== */
+img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* ========================================
+   20. ADDITIONAL ANIMATIONS
+   ======================================== */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.8s ease;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.8s ease;
+}
+
+/* ========================================
+   21. PRINT STYLES
+   ======================================== */
+@media print {
+    header, footer, .btn, .cta-section {
+        display: none;
+    }
+    
+    main {
+        padding-top: 0;
+    }
+    
+    .card {
+        break-inside: avoid;
+    }
+}
+
+/* ========================================
+   22. DARK/LIGHT THEME STYLES
+   ======================================== */
+
+/* Light Theme (Default) */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --card-bg: #ffffff;
+    --navbar-bg: #0056b3;
+    --footer-bg: #212529;
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --border-color: #495057;
+    --card-bg: #2d2d2d;
+    --navbar-bg: #003d82;
+    --footer-bg: #0d0d0d;
+}
+
+/* Apply theme variables */
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-theme {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.dark-theme .card {
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .text-dark {
+    color: var(--text-primary) !important;
+}
+
+.dark-theme .text-muted {
+    color: var(--text-secondary) !important;
+}
+
+.dark-theme .bg-secondary-light {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%) !important;
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+.dark-theme .form-control:focus,
+.dark-theme .form-select:focus {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-color: #0056b3;
+}
+
+.dark-theme .accordion-button {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.dark-theme .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    color: #ffffff;
+}
+
+.dark-theme .accordion-body {
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.dark-theme footer {
+    background: linear-gradient(135deg, var(--footer-bg) 0%, #1a1a1a 100%);
+}
+
+.dark-theme .price-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+    border-color: var(--border-color);
+}
+
+.dark-theme .statistics-section {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+}
+
+.dark-theme .navbar {
+    background: linear-gradient(135deg, var(--navbar-bg) 0%, #002959 100%) !important;
+}
+
+/* Theme Toggle Button Animation */
+#themeToggle {
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    transform: scale(1.1);
+}
+
+#themeToggle.rotating {
+    animation: rotate360 0.5s ease;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   23. API WIDGET STYLES
+   ======================================== */
+
+/* Weather Widget */
+.weather-widget {
+    animation: slideInDown 0.5s ease;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather-widget .card {
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.05) 0%, rgba(0, 86, 179, 0.1) 100%);
+    border-left: 4px solid #0056b3;
+}
+
+.dark-theme .weather-widget .card {
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.1) 0%, rgba(0, 86, 179, 0.15) 100%);
+}
+
+/* Quote Card */
+.quote-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 4px solid #0056b3;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-theme .quote-card {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+}
+
+.quote-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 86, 179, 0.1) 0%, transparent 70%);
+    animation: pulse 3s infinite;
+}
+
+/* News Cards */
+.news-card {
+    transition: all 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 86, 179, 0.2);
+}
+
+.news-card img {
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover img {
+    transform: scale(1.05);
+}
+
+.dark-theme .news-card {
+    background: var(--card-bg);
+}
+
+/* ========================================
+   24. ⭐️ НОВЫЕ СТИЛИ: БЕЛЫЕ АКЦЕНТЫ В ТЕМНОЙ ТЕМЕ
+   ======================================== */
+
+/* 1. Меняем синий текст на белый */
+.dark-theme .text-primary {
+    color: #f1f1f1 !important;
+}
+
+.dark-theme .stat-box:hover i {
+    color: #f1f1f1 !important;
+}
+
+.dark-theme .contact-info-box a:hover {
+    color: #f1f1f1 !important;
+}
+
+/* 2. Меняем синие градиентные заголовки на белые */
+.dark-theme .display-3, 
+.dark-theme .display-4 {
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    color: #f1f1f1;
+}
+
+/* 3. Меняем синие кнопки (outline) на белые */
+.dark-theme .btn-outline-primary {
+    border-color: #f1f1f1;
+    color: #f1f1f1;
+}
+
+.dark-theme .btn-outline-primary:hover {
+    background: #f1f1f1;
+    color: #1a1a1a; /* Темный текст при наведении */
+}
+
+/* 4. Меняем синий фон аккордеона на темно-серый */
+.dark-theme .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+    color: #f1f1f1;
+}
+
+.dark-theme .accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(241, 241, 241, 0.15);
+}
+
+/* 5. Меняем синие рамки виджетов на белые */
+.dark-theme .weather-widget .card {
+    border-left-color: #f1f1f1;
+    background: linear-gradient(135deg, rgba(241, 241, 241, 0.05) 0%, rgba(241, 241, 241, 0.1) 100%);
+}
+
+.dark-theme .quote-card {
+    border-left-color: #f1f1f1;
+}
+
+.dark-theme .quote-card::before {
+    background: radial-gradient(circle, rgba(241, 241, 241, 0.1) 0%, transparent 70%);
+}
+
+/* 6. Меняем синий фон (Navbar, CTA) на темно-серый */
+.dark-theme .cta-section {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+}
+
+.dark-theme .bg-primary,
+.dark-theme .navbar {
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%) !important;
+}
+
+/* 7. Убираем синий фон при наведении */
+.dark-theme .quick-nav-card:hover {
+    background: linear-gradient(135deg, #3a3a3a 0%, #2d2d2d 100%);
+}
+
+.dark-theme .price-card:hover {
+    border-color: #f1f1f1;
+}
+
+/* 8. Декоративная линия */
+.dark-theme .decorative-line {
+    background: linear-gradient(90deg, #f1f1f1, #adb5bd);
+}
