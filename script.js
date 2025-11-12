@@ -57,7 +57,7 @@ $(document).ready(function() {
     function handleFormSubmissionWithGoogleSheets() {
         
         
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwakNfYcrTyyyCJVGHxeLVwnlcACnIez23wtQgoEup5T-xoWi2iroeox21OJ9IKk92s/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbePvuK3HwqXO6ZxlwjZPTDX5pxkLpj79Xcpi47GFcZjm0LD3GNBmdOtGT0wOrB9v9/exec';
        
         const $form = $('#enrollmentForm');
         const $submitButton = $form.find('button[type="submit"]');
